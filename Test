@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุ่มลิงก์</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>สุ่มลิงก์ออนไลน์</h1>
+        <button id="randomLink">คลิกเพื่อสุ่มลิงก์</button>
+    </div>
+
+    <script>
+        // รายการลิงก์ที่ต้องการสุ่ม
+        const links = [
+            "https://www.youtube.com/watch?v=d3GRtM5pdi4",
+            "https://web.facebook.com/?_rdc=1&_rdr#",
+            "https://www.youtube.com/watch?v=jM0TPdspQ6Y",
+            "https://www.youtube.com/watch?v=L9nsLzL3Zvk",
+            "https://www.youtube.com/watch?v=XJ1Jigjg1wo"
+        ];
+
+        // ฟังก์ชันสำหรับสุ่มลิงก์
+        document.getElementById("randomLink").addEventListener("click", function () {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            window.location.href = links[randomIndex];
+        });
+    </script>
+</body>
+</html>
